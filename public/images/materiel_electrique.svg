@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0500"/>
+      <stop offset="50%" style="stop-color:#5c1a00"/>
+      <stop offset="100%" style="stop-color:#8c3300"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#ff6600;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#1a0500;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Cable bundles -->
+  <rect x="50" y="100" width="12" height="400" rx="6" fill="#cc4400" opacity="0.9"/>
+  <rect x="70" y="80" width="12" height="440" rx="6" fill="#ff8800" opacity="0.85"/>
+  <rect x="90" y="120" width="12" height="360" rx="6" fill="#ffaa00" opacity="0.9"/>
+  <rect x="110" y="90" width="12" height="420" rx="6" fill="#00aa55" opacity="0.85"/>
+  <!-- Switch panel -->
+  <rect x="250" y="200" width="300" height="200" rx="12" fill="#1a0800" stroke="#cc4400" stroke-width="2" opacity="0.9"/>
+  <rect x="270" y="220" width="60" height="40" rx="8" fill="#cc4400" opacity="0.8"/>
+  <rect x="345" y="220" width="60" height="40" rx="8" fill="#333" opacity="0.8"/>
+  <rect x="420" y="220" width="60" height="40" rx="8" fill="#cc4400" opacity="0.8"/>
+  <rect x="270" y="275" width="60" height="40" rx="8" fill="#333" opacity="0.8"/>
+  <rect x="345" y="275" width="60" height="40" rx="8" fill="#cc4400" opacity="0.8"/>
+  <rect x="420" y="275" width="60" height="40" rx="8" fill="#333" opacity="0.8"/>
+  <!-- Spark effects -->
+  <circle cx="660" cy="250" r="3" fill="#ffff00" opacity="0.9"/>
+  <line x1="660" y1="250" x2="680" y2="230" stroke="#ffff00" stroke-width="1.5" opacity="0.7"/>
+  <line x1="660" y1="250" x2="640" y2="240" stroke="#ffff00" stroke-width="1" opacity="0.5"/>
+  <!-- Text -->
+  <text x="400" y="470" font-family="Georgia, serif" font-size="36" fill="white" text-anchor="middle" opacity="0.9">Matériel Électrique</text>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="16" fill="#ff8800" text-anchor="middle" opacity="0.85">⚡ Câbles · Prises · Interrupteurs</text>
+</svg>

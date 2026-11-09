@@ -1,0 +1,496 @@
+{
+  "admin": {
+    "email": "admin@sanadelec.ma",
+    "password": "admin123"
+  },
+  "settings": {
+    "whatsappNumber": "212600000000",
+    "storeName": "SANAD ELEC",
+    "currency": "MAD"
+  },
+  "products": [
+    {
+      "id": "astra-table-lamp",
+      "name": "Lampe de Table Astra",
+      "nameEn": "Astra Table Lamp",
+      "description": "Lampe à poser en laiton brossé aux lignes sculpturales douces. Crée une lumière enveloppante et feutrée pour tables d'appoint, bureaux et consoles.",
+      "descriptionEn": "Brushed brass table lamp with soft sculptural contours. Casts a warm and soothing ambient glow for side tables, desks, and consoles.",
+      "price": 2290,
+      "priceDisplay": "2 290 MAD",
+      "image": "/images/prod_astra_table.jpg",
+      "categoryId": "eclairage-interieur",
+      "badge": "Bestseller",
+      "badgeEn": "Best Seller",
+      "specs": [
+        "Matière: Laiton massif brossé",
+        "Hauteur: 38 cm",
+        "Douille: E14 LED 5W incluse",
+        "Variateur tactile 3 niveaux",
+        "Finition dorée satinée"
+      ],
+      "specsEn": [
+        "Material: Solid brushed brass",
+        "Height: 38 cm",
+        "Socket: E14 LED 5W included",
+        "3-level touch dimmer",
+        "Satin gold finish"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "arc-floor-lamp",
+      "name": "Lampadaire Arc Sculptural",
+      "nameEn": "Arc Sculptural Floor Lamp",
+      "description": "Lampadaire arc sculptural minimaliste avec socle lourd en marbre noir et abat-jour coupole orientable. Idéal pour lecture et salon contemporain.",
+      "descriptionEn": "Minimalist sculptural arch floor lamp with a heavy black marble base and adjustable dome shade. Ideal for reading and contemporary living rooms.",
+      "price": 3990,
+      "priceDisplay": "3 990 MAD",
+      "image": "/images/prod_arc_floor.jpg",
+      "categoryId": "eclairage-interieur",
+      "badge": "Signature",
+      "badgeEn": "Signature",
+      "specs": [
+        "Matière: Acier noir mat & socle marbre",
+        "Hauteur réglable: 180-210 cm",
+        "Interrupteur au pied",
+        "Ampoule E27 LED",
+        "Angle de projection orientable"
+      ],
+      "specsEn": [
+        "Material: Matte black steel & marble base",
+        "Adjustable height: 180-210 cm",
+        "Foot step switch",
+        "E27 LED bulb",
+        "Adjustable beam angle"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "lume-wall-sconce",
+      "name": "Applique Murale Lume",
+      "nameEn": "Lume Wall Sconce",
+      "description": "Applique murale à double globe en verre opalin soufflé monté sur patère circulaire en laiton vieilli. Diffusion omnidirectionnelle chaleureuse.",
+      "descriptionEn": "Dual-globe wall sconce in hand-blown opal glass mounted on an aged brass circular canopy. Warm omnidirectional diffusion.",
+      "price": 1890,
+      "priceDisplay": "1 890 MAD",
+      "image": "/images/prod_lume_sconce.jpg",
+      "categoryId": "eclairage-interieur",
+      "badge": "Coup de Cœur",
+      "badgeEn": "Curator's Pick",
+      "specs": [
+        "Matière: Verre opalin soufflé & laiton",
+        "Dimensions: 42 × 16 cm",
+        "Double ampoule G9",
+        "Compatible variateur mural",
+        "Indice IP20"
+      ],
+      "specsEn": [
+        "Material: Hand-blown opal glass & brass",
+        "Dimensions: 42 × 16 cm",
+        "Twin G9 bulbs",
+        "Wall dimmer compatible",
+        "Rating IP20"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "orbis-pendant-light",
+      "name": "Suspension Globe Orbis",
+      "nameEn": "Orbis Globe Pendant Light",
+      "description": "Suspension globe en verre teinté fumé avec douille en laiton brossé et ampoule à filament spiralé visible. Élégance intemporelle pour tables et îlots.",
+      "descriptionEn": "Smoked tinted glass globe pendant with brushed brass fitting and exposed spiral filament bulb. Timeless elegance for tables and kitchen islands.",
+      "price": 3490,
+      "priceDisplay": "3 490 MAD",
+      "image": "/images/prod_orbis_pendant.jpg",
+      "categoryId": "eclairage-interieur",
+      "badge": "Iconique",
+      "badgeEn": "Iconic",
+      "specs": [
+        "Matière: Verre fumé soufflé & laiton",
+        "Diamètre globe: 28 cm",
+        "Câble textile tissé noir 200 cm",
+        "Ampoule filament LED ambrée incluse",
+        "Rosace assortie incluse"
+      ],
+      "specsEn": [
+        "Material: Blown smoked glass & brass",
+        "Globe diameter: 28 cm",
+        "Woven black fabric cable 200 cm",
+        "Amber LED filament bulb included",
+        "Matching canopy included"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "lustre-cristal-premium",
+      "name": "Lustre Cristal Premium",
+      "description": "Lustre en cristal taillé à la main, design art déco moderne. Idéal pour salons et salles à manger haut de gamme. Éclairage chaud et sophistiqué.",
+      "price": 4500,
+      "priceDisplay": "4 500 MAD",
+      "image": "/images/hero_lumenne.jpg",
+      "categoryId": "eclairage-interieur",
+      "badge": "Haute Couture",
+      "specs": [
+        "Matière: Cristal & métal doré",
+        "Ampoules: E27 × 12",
+        "Diamètre: 80 cm",
+        "Puissance max: 480W",
+        "Classe énergétique: A++"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "plafonnier-design",
+      "name": "Plafonnier Design Noir Mat",
+      "description": "Plafonnier moderne au design épuré en métal noir mat. Compatible LED. Parfait pour chambres, couloirs et espaces modernes.",
+      "price": 890,
+      "priceDisplay": "890 MAD",
+      "image": "/images/cat_floor_lamp.jpg",
+      "categoryId": "eclairage-interieur",
+      "specs": [
+        "Matière: Métal noir mat",
+        "Douille: E27",
+        "Diamètre: 45 cm",
+        "Compatible LED",
+        "IP20"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "suspension-bois",
+      "name": "Suspension Sculpturale Vague",
+      "description": "Suspension artisanale aux lignes ondulées en feutre et papier de riz texturé. Crée une ambiance douce, poétique et enveloppante.",
+      "price": 1250,
+      "priceDisplay": "1 250 MAD",
+      "image": "/images/cat_pendant_light.jpg",
+      "categoryId": "eclairage-interieur",
+      "badge": "Nouveau",
+      "specs": [
+        "Matière: Papier texturé & laiton",
+        "Câble réglable: 150 cm",
+        "Douille: E27",
+        "Puissance max: 60W"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "applique-murale-led",
+      "name": "Applique Murale Laiton Circulaire",
+      "description": "Applique murale circulaire avec rétro-éclairage LED indirect. Halo lumineux doux créant une ombre portée artistique sur le mur.",
+      "price": 650,
+      "priceDisplay": "650 MAD",
+      "image": "/images/cat_wall_sconce.jpg",
+      "categoryId": "eclairage-interieur",
+      "specs": [
+        "LED intégré: 12W",
+        "Luminosité: 900lm",
+        "Température: 2700K chaud",
+        "IP44",
+        "Durée de vie: 50 000h"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "ruban-led-rgb",
+      "name": "Ruban LED Architectural Pro 5m",
+      "description": "Ruban LED haute densité CRI 95+ pour corniches, plinthes et gorges lumineuses. Lumière homogène sans points visibles.",
+      "price": 350,
+      "priceDisplay": "350 MAD",
+      "image": "/images/eclairage_led.jpg",
+      "categoryId": "eclairage-led",
+      "badge": "Smart Home",
+      "specs": [
+        "Longueur: 5 mètres",
+        "Indice rendu couleurs CRI > 95",
+        "Compatible WiFi/DALI",
+        "24V DC",
+        "IP65 étanche"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "panneau-led-60x60",
+      "name": "Dalle LED Ciel Lumineux 60×60",
+      "description": "Dalle LED ultra-fine encastrable haute performance. Diffusion douce anti-éblouissement UGR < 19.",
+      "price": 400,
+      "priceDisplay": "400 MAD",
+      "image": "/images/prod_1794255102312_photo_5922687140603040446_y.jpg",
+      "categoryId": "eclairage-led",
+      "specs": [
+        "Puissance: 40W",
+        "Flux: 4000lm",
+        "Température: 3000K-4000K",
+        "IP44",
+        "Classe A++"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z",
+      "badge": ""
+    },
+    {
+      "id": "spot-led-encastrable",
+      "name": "Spot LED Encastrable Sans Collerette",
+      "description": "Spot trimless encastrable plâtré dans le plafond pour une intégration invisible et un faisceau architectural précis.",
+      "price": 145,
+      "priceDisplay": "145 MAD",
+      "image": "/images/eclairage_led.jpg",
+      "categoryId": "eclairage-led",
+      "specs": [
+        "Puissance: 9W",
+        "Flux: 900lm",
+        "Angle: 36°",
+        "Variateur DALI/Triac",
+        "Finition: Blanc plâtre"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "projecteur-led-exterieur",
+      "name": "Projecteur Architectural Extérieur 50W",
+      "description": "Projecteur LED compact en fonte d'aluminium anodisé pour illumination de façades, oliviers et jardins paysagers.",
+      "price": 520,
+      "priceDisplay": "520 MAD",
+      "image": "/images/eclairage_exterieur.svg",
+      "categoryId": "eclairage-exterieur",
+      "badge": "Bestseller",
+      "specs": [
+        "Puissance: 50W",
+        "Flux: 5200lm",
+        "IP67 Étanche",
+        "Verre trempé haute résistance",
+        "Angle: 45°"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "borne-jardin-solaire",
+      "name": "Borne de Jardin Graphite & Laiton",
+      "description": "Borne lumineuse d'allée minimaliste en aluminium sablé noir graphite avec diffuseur polycarbonate anti-vandale.",
+      "price": 380,
+      "priceDisplay": "380 MAD",
+      "image": "/images/eclairage_exterieur.svg",
+      "categoryId": "eclairage-exterieur",
+      "specs": [
+        "Hauteur: 80 cm",
+        "Indice IP65",
+        "Ampoule E27 LED",
+        "Finition graphite thermolaqué",
+        "Ancrage inox"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "highbay-led-200w",
+      "name": "Suspension Industrielle Highbay LED 200W",
+      "description": "Luminaire industriel grande hauteur pour entrepôts, showrooms et espaces commerciaux. Rendement lumineux exceptionnel.",
+      "price": 1400,
+      "priceDisplay": "1 400 MAD",
+      "image": "/images/eclairage_professionnel.svg",
+      "categoryId": "eclairage-professionnel",
+      "badge": "Pro",
+      "specs": [
+        "Puissance: 200W",
+        "Flux: 28 000lm",
+        "IP65",
+        "Driver MeanWell",
+        "Garantie 5 ans"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "rail-magnetique-modulaire",
+      "name": "Système Rail Magnétique 48V",
+      "description": "Rail profilé magnétique encastré ou suspendu avec modules spots, linéaires et suspensions clipsables instantanément.",
+      "price": 1850,
+      "priceDisplay": "1 850 MAD",
+      "image": "/images/eclairage_professionnel.svg",
+      "categoryId": "eclairage-professionnel",
+      "badge": "Architectural",
+      "specs": [
+        "Tension basse 48V sécurisée",
+        "Longueur: 2m modulaire",
+        "Contrôle Bluetooth / Zigbee",
+        "Finition noir mat",
+        "Modules interchangeables"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "pack-domotique-lumiere",
+      "name": "Centrale Domotique Éclairage Smart",
+      "description": "Passerelle intelligente permettant de programmer scénarios lumineux, gradation au crépuscule et contrôle vocal.",
+      "price": 950,
+      "priceDisplay": "950 MAD",
+      "image": "/images/domotique_sonorisation.svg",
+      "categoryId": "domotique-sonorisation",
+      "badge": "Connecté",
+      "specs": [
+        "Protocoles: Zigbee 3.0 & Matter",
+        "Compatible Apple HomeKit, Alexa, Google",
+        "Portée 100m",
+        "App iOS / Android"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "enceinte-connectee",
+      "name": "Enceinte Encastrable Plafond Hi-Fi",
+      "description": "Haut-parleur encastré au plafond sans grille visible pour diffusion musicale multi-room haute fidélité.",
+      "price": 1650,
+      "priceDisplay": "1 650 MAD",
+      "image": "/images/domotique_sonorisation.svg",
+      "categoryId": "domotique-sonorisation",
+      "badge": "Audio Pro",
+      "specs": [
+        "Puissance: 80W RMS",
+        "Réponse: 45Hz - 22kHz",
+        "Grille magnétique peignable",
+        "Résistant humidité"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "interrupteur-va-vient",
+      "name": "Interrupteur Laiton Massif Brossé",
+      "description": "Appareillage électrique de luxe avec plaque en laiton massif usiné et levier à bascule rétro.",
+      "price": 240,
+      "priceDisplay": "240 MAD",
+      "image": "/images/materiel_electrique.svg",
+      "categoryId": "materiel-electrique",
+      "badge": "Luxe",
+      "specs": [
+        "Matière: Laiton massif brossé",
+        "Courant: 10A / 250V",
+        "Mécanisme silencieux haut de gamme",
+        "Boîte d'encastrement standard"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "prise-usb-encastrable",
+      "name": "Prise Affleurante 2P+T & Double USB-C",
+      "description": "Prise murale ultra-plate en verre trempé noir avec charge rapide Power Delivery 30W.",
+      "price": 180,
+      "priceDisplay": "180 MAD",
+      "image": "/images/materiel_electrique.svg",
+      "categoryId": "materiel-electrique",
+      "badge": "Nouveau",
+      "specs": [
+        "Prise 16A terre",
+        "USB-C PD 30W rapide",
+        "Finition verre noir minéral",
+        "Sécurité enfants"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "tableau-electrique-12mod",
+      "name": "Tableau Électrique Design Encastré",
+      "description": "Coffret de distribution encastré avec porte en verre fumé miroir sans charnières apparentes.",
+      "price": 890,
+      "priceDisplay": "890 MAD",
+      "image": "/images/coffrets_distribution.svg",
+      "categoryId": "coffrets-distribution",
+      "badge": "Design",
+      "specs": [
+        "24 modules sur 2 rangées",
+        "Porte miroir fumée affleurante",
+        "Borniers automatiques Quick Connect",
+        "Norme NF C 15-100"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    },
+    {
+      "id": "armoire-electrique-industrielle",
+      "name": "Armoire Distribution Modulaire IP65",
+      "description": "Armoire de protection et distribution étanche pour villas et projets industriels exigeants.",
+      "price": 3200,
+      "priceDisplay": "3 200 MAD",
+      "image": "/images/coffrets_distribution.svg",
+      "categoryId": "coffrets-distribution",
+      "specs": [
+        "Dimensions: 800×600×250mm",
+        "Acier thermo-laqué anti-corrosion",
+        "IP65 & IK10",
+        "Serrure à clé"
+      ],
+      "createdAt": "2026-11-03T17:41:15.778Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "CMD-2026-461",
+      "date": "04/11/2026 19:52",
+      "timestamp": 1793818324683,
+      "productId": "astra-table-lamp",
+      "productName": "Astra Tab",
+      "productImage": "/images/prod_astra_table.jpg",
+      "price": 500,
+      "priceFormatted": "500 MAD",
+      "status": "whatsapp_initiated",
+      "customerName": "Visiteur Web",
+      "customerPhone": "",
+      "notes": "Client a cliqué sur 'Commander via WhatsApp' depuis la fiche produit.",
+      "source": "whatsapp_button"
+    },
+    {
+      "id": "CMD-2026-081",
+      "date": "03/11/2026 15:32",
+      "timestamp": 1793724975754,
+      "productId": "astra-table-lamp",
+      "productName": "Astra Table Lamp",
+      "productImage": "/images/prod_astra_table.jpg",
+      "price": 229,
+      "priceFormatted": "229 MAD",
+      "status": "confirmed",
+      "customerName": "Karim Benjelloun",
+      "customerPhone": "+212 6 61 23 45 67",
+      "notes": "Demande de livraison sur Casablanca - Triangle d'Or",
+      "source": "whatsapp_button"
+    },
+    {
+      "id": "CMD-2026-080",
+      "date": "03/11/2026 14:15",
+      "timestamp": 1793720475755,
+      "productId": "arc-floor-lamp",
+      "productName": "Arc Floor Lamp",
+      "productImage": "/images/prod_arc_floor.jpg",
+      "price": 399,
+      "priceFormatted": "399 MAD",
+      "status": "whatsapp_initiated",
+      "customerName": "Salma El Idrissi",
+      "customerPhone": "+212 6 62 98 76 54",
+      "notes": "Client a cliqué sur WhatsApp pour demander la disponibilité en stock",
+      "source": "whatsapp_button"
+    },
+    {
+      "id": "CMD-2026-079",
+      "date": "02/11/2026 18:40",
+      "timestamp": 1793648475755,
+      "productId": "orbis-pendant-light",
+      "productName": "Orbis Pendant Light",
+      "productImage": "/images/prod_orbis_pendant.jpg",
+      "price": 349,
+      "priceFormatted": "349 MAD",
+      "status": "delivered",
+      "customerName": "Architecte Mehdi Tazi",
+      "customerPhone": "+212 6 63 11 22 33",
+      "notes": "Commande 3 unités pour projet de restaurant à Marrakech (Payé)",
+      "source": "whatsapp_button"
+    },
+    {
+      "id": "CMD-2026-078",
+      "date": "01/11/2026 11:10",
+      "timestamp": 1793554875755,
+      "productId": "lustre-cristal-premium",
+      "productName": "Lustre Cristal Premium",
+      "productImage": "/images/hero_lumenne.jpg",
+      "price": 4500,
+      "priceFormatted": "4 500 MAD",
+      "status": "shipped",
+      "customerName": "Villa Californie",
+      "customerPhone": "+212 6 64 55 66 77",
+      "notes": "Expédié par transporteur privé Sanad Elec avec installation",
+      "source": "whatsapp_button"
+    }
+  ]
+}
