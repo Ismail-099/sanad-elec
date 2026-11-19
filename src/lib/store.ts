@@ -126,11 +126,11 @@ const initialOrders: AdminOrder[] = [
 function getDefaultData(): DatabaseSchema {
   return {
     admin: {
-      email: "admin@sanadelec.ma",
-      password: "admin123",
+      email: process.env.ADMIN_EMAIL || "admin@sanadelec.ma",
+      password: process.env.ADMIN_PASSWORD || "admin123",
     },
     settings: {
-      whatsappNumber: initialWa,
+      whatsappNumber: process.env.WHATSAPP_NUMBER || initialWa,
       storeName: "SANAD ELEC",
       currency: "MAD",
     },

@@ -1,9 +1,16 @@
-
 import { NextRequest, NextResponse } from "next/server";
 import { getDatabase, saveDatabase, AdminOrder } from "@/lib/store";
+import { verifyAdminSession } from "@/lib/auth";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    if (!(await verifyAdminSession(req))) {
+      return NextResponse.json(
+        { success: false, message: "Accès refusé. Authentification requise." },
+        { status: 401 }
+      );
+    }
+
     const db = await getDatabase();
     return NextResponse.json({
       success: true,
@@ -28,20 +35,24 @@ export async function POST(req: NextRequest) {
     const randomSuffix = Math.floor(100 + Math.random() * 900);
     const orderId = `CMD-${now.getFullYear()}-${randomSuffix}`;
 
+    // Sanitize string inputs
+    const sanitize = (val: any, maxLen = 100) =>
+      typeof val === "string" ? val.replace(/[<>]/g, "").slice(0, maxLen) : "";
+
     const newOrder: AdminOrder = {
       id: orderId,
       date: dateFormatted,
       timestamp: Date.now(),
-      productId: body.productId || "inconnu",
-      productName: body.productName || "Commande Luminaire",
-      productImage: body.productImage || "/images/hero_lumenne.jpg",
-      price: Number(body.price) || 0,
-      priceFormatted: body.priceFormatted || `${Number(body.price || 0).toLocaleString("fr-FR")} MAD`,
+      productId: sanitize(body.productId || "inconnu", 60),
+      productName: sanitize(body.productName || "Commande Luminaire", 120),
+      productImage: typeof body.productImage === "string" ? body.productImage.slice(0, 300) : "/images/hero_lumenne.jpg",
+      price: Math.max(0, Number(body.price) || 0),
+      priceFormatted: `${Math.max(0, Number(body.price) || 0).toLocaleString("fr-FR")} MAD`,
       status: "whatsapp_initiated",
-      customerName: body.customerName || "Visiteur Web",
-      customerPhone: body.customerPhone || "",
-      notes: body.notes || "Client a cliqué sur 'Commander via WhatsApp'",
-      source: body.source || "whatsapp_button",
+      customerName: sanitize(body.customerName || "Visiteur Web", 60),
+      customerPhone: sanitize(body.customerPhone || "", 30),
+      notes: sanitize(body.notes || "Client a cliqué sur 'Commander via WhatsApp'", 250),
+      source: "whatsapp_button",
     };
 
     if (!db.orders) db.orders = [];
@@ -63,6 +74,13 @@ export async function POST(req: NextRequest) {
 
 export async function PUT(req: NextRequest) {
   try {
+    if (!(await verifyAdminSession(req))) {
+      return NextResponse.json(
+        { success: false, message: "Accès refusé. Authentification requise." },
+        { status: 401 }
+      );
+    }
+
     const body = await req.json();
     const { id, status, notes, customerName, customerPhone } = body;
 
@@ -85,9 +103,9 @@ export async function PUT(req: NextRequest) {
     }
 
     if (status) db.orders[index].status = status;
-    if (notes !== undefined) db.orders[index].notes = notes;
-    if (customerName) db.orders[index].customerName = customerName;
-    if (customerPhone) db.orders[index].customerPhone = customerPhone;
+    if (notes !== undefined) db.orders[index].notes = String(notes).replace(/[<>]/g, "").slice(0, 300);
+    if (customerName) db.orders[index].customerName = String(customerName).replace(/[<>]/g, "").slice(0, 60);
+    if (customerPhone) db.orders[index].customerPhone = String(customerPhone).replace(/[<>]/g, "").slice(0, 30);
 
     await saveDatabase(db);
 
@@ -106,6 +124,13 @@ export async function PUT(req: NextRequest) {
 
 export async function DELETE(req: NextRequest) {
   try {
+    if (!(await verifyAdminSession(req))) {
+      return NextResponse.json(
+        { success: false, message: "Accès refusé. Authentification requise." },
+        { status: 401 }
+      );
+    }
+
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");
 

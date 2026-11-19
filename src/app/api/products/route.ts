@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDatabase, saveDatabase, AdminProduct } from "@/lib/store";
+import { verifyAdminSession } from "@/lib/auth";
 
 export async function GET() {
   try {
@@ -19,6 +20,13 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
+    if (!(await verifyAdminSession(req))) {
+      return NextResponse.json(
+        { success: false, message: "Accès refusé. Authentification requise." },
+        { status: 401 }
+      );
+    }
+
     const body = await req.json();
     const db = await getDatabase();
 
@@ -70,6 +78,13 @@ export async function POST(req: NextRequest) {
 
 export async function PUT(req: NextRequest) {
   try {
+    if (!(await verifyAdminSession(req))) {
+      return NextResponse.json(
+        { success: false, message: "Accès refusé. Authentification requise." },
+        { status: 401 }
+      );
+    }
+
     const body = await req.json();
     const { id, ...updates } = body;
 
@@ -119,6 +134,13 @@ export async function PUT(req: NextRequest) {
 
 export async function DELETE(req: NextRequest) {
   try {
+    if (!(await verifyAdminSession(req))) {
+      return NextResponse.json(
+        { success: false, message: "Accès refusé. Authentification requise." },
+        { status: 401 }
+      );
+    }
+
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");
 

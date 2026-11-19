@@ -58,13 +58,23 @@ export default function AdminPage() {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Check initial login session
+  // Check initial login session securely via server
   useEffect(() => {
-    const saved = localStorage.getItem("sanad_admin_auth");
-    if (saved === "true") {
-      setIsAuthenticated(true);
-      fetchData();
-    }
+    const checkSession = async () => {
+      try {
+        const res = await fetch("/api/auth");
+        const data = await res.json();
+        if (data.authenticated) {
+          setIsAuthenticated(true);
+          fetchData();
+          return;
+        }
+      } catch {
+        // Session not active
+      }
+      setIsAuthenticated(false);
+    };
+    checkSession();
   }, []);
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -82,7 +92,6 @@ export default function AdminPage() {
 
       if (data.success) {
         setIsAuthenticated(true);
-        localStorage.setItem("sanad_admin_auth", "true");
         fetchData();
       } else {
         setLoginError(data.message || "Identifiants incorrects.");
@@ -94,9 +103,13 @@ export default function AdminPage() {
     }
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await fetch("/api/auth", { method: "DELETE" });
+    } catch {
+      // Ignored
+    }
     setIsAuthenticated(false);
-    localStorage.removeItem("sanad_admin_auth");
   };
 
   const fetchData = async () => {

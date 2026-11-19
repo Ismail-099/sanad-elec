@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDatabase, saveDatabase } from "@/lib/store";
+import { verifyAdminSession } from "@/lib/auth";
 
 export async function GET() {
   try {
@@ -22,6 +23,13 @@ export async function GET() {
 
 export async function PUT(req: NextRequest) {
   try {
+    if (!(await verifyAdminSession(req))) {
+      return NextResponse.json(
+        { success: false, message: "Accès refusé. Authentification requise." },
+        { status: 401 }
+      );
+    }
+
     const { whatsappNumber, newPassword, currentPassword } = await req.json();
     const db = await getDatabase();
 
